@@ -1,2 +1,3 @@
 # SwiftChess
-Chess Library in Swift
+
+A description of this package.
