@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Game {
+public struct Game {
     var pgnMoves = [String]()
     var board: Board
     var gameState: GameState
