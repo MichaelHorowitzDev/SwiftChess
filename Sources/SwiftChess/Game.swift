@@ -52,13 +52,13 @@ public struct Game {
         turn = board.turn
     }
     
-    init(board: Board) {
+    public init(board: Board) {
         self.board = board
         self.gameState = self.board.gameState()
         self.turn = self.board.turn
     }
     
-    init() {
+    public init() {
         self.board = Board()
         self.gameState = .playing
         self.turn = self.board.turn
