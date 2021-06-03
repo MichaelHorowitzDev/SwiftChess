@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Board {
+public struct Board {
     var board: [[Piece?]]
     var turn: PieceColor = .white
     var moves = [(move: Move, pieceMoved: Piece, pieceCaptured: Piece?)]()
@@ -19,7 +19,7 @@ struct Board {
     var enPassantSquare: (x: Int, y: Int)?
     
     // create board with starting board setup
-    init() {
+    public init() {
         self.board = [
             [Rook(color: .white), Knight(color: .white), Bishop(color: .white), Queen(color: .white), King(color: .white), Bishop(color: .white), Knight(color: .white), Rook(color: .white)],
             [Pawn(color: .white), Pawn(color: .white), Pawn(color: .white), Pawn(color: .white), Pawn(color: .white), Pawn(color: .white), Pawn(color: .white), Pawn(color: .white)],
@@ -43,7 +43,7 @@ struct Board {
         self.fenMoves = [self.fen]
     }
     // init board with FEN
-    init(fen: FEN) {
+    public init(fen: FEN) {
         if fen.isValid == false {
             fatalError("Invalid FEN Recieved")
         } else {
