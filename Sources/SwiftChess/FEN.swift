@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct FEN {
+public struct FEN {
     var fen: String
     var board: Board
     var isValid: Bool = true
     
-    init(board: Board) {
+    public init(board: Board) {
         self.fen = boardToFen(board: board)
         self.board = board
     }
-    init(fen: String) {
+    public init(fen: String) {
         self.fen = fen
         let fenBoard = fenToBoard(fen: fen)
         if fenBoard == nil {
