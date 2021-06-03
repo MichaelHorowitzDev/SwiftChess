@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum PieceColor {
+public enum PieceColor {
     case white, black
     var opposite: PieceColor {
         return self == .white ? .black : .white
@@ -17,15 +17,15 @@ enum PieceColor {
     }
 }
 
-enum Promotion {
+public enum Promotion {
     case queen, rook, knight, bishop
 }
 
-enum GameState {
+public enum GameState {
     case playing, check, checkmate, stalemate, repetition, moveRule
 }
 
-enum MoveResult {
+public enum MoveResult {
     case success, error
 }
 
