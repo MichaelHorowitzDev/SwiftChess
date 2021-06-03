@@ -15,7 +15,7 @@ public struct Game {
     
     // make move on board but also check for gamestate
     @discardableResult
-    mutating func makeMove(move: Move, forced: Bool = false, _ promotion: Promotion = .queen) -> MoveResult {
+    public mutating func makeMove(move: Move, forced: Bool = false, _ promotion: Promotion = .queen) -> MoveResult {
         var moveResult: MoveResult = .error
         if gameState == .playing || gameState == .check {
             if board.makeMove(move: move, forced: forced, promotion) == .success {
@@ -40,13 +40,13 @@ public struct Game {
         }
         return moveResult
     }
-    mutating func canMove(move: Move) -> Bool {
+    public mutating func canMove(move: Move) -> Bool {
         return board.canMove(move: move)
     }
-    mutating func willPromote(move: Move) -> Bool {
+    public mutating func willPromote(move: Move) -> Bool {
         return board.willPromote(move: move)
     }
-    mutating func undoMove() {
+    public mutating func undoMove() {
         board.undoMove()
         gameState = board.gameState()
         turn = board.turn
@@ -63,7 +63,7 @@ public struct Game {
         self.gameState = .playing
         self.turn = self.board.turn
     }
-    mutating func changeFEN(fen: FEN) {
+    public mutating func changeFEN(fen: FEN) {
         board = fen.board
         gameState = self.board.gameState()
         turn = self.board.turn
