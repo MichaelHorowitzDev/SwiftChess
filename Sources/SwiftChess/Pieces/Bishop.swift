@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Bishop: Piece {
+public struct Bishop: Piece {
     var color: PieceColor
     
     func attackingSquares(x: Int, y: Int, board: [[Piece?]]) -> [(Int, Int)] {
