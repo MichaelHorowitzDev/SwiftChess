@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Knight: Piece {
-    var color: PieceColor
+public struct Knight: Piece {
+   public var color: PieceColor
     
-    func attackingSquares(x: Int, y: Int, board: [[Piece?]]) -> [(Int, Int)] {
+    public func attackingSquares(x: Int, y: Int, board: [[Piece?]]) -> [(Int, Int)] {
         var attacking = [(Int, Int)]()
         let offsets = [
             (x+1, y+2),
@@ -30,7 +30,7 @@ struct Knight: Piece {
         return attacking
     }
     
-    func moves(x: Int, y: Int, board: [[Piece?]]) -> [Move] {
+    public func moves(x: Int, y: Int, board: [[Piece?]]) -> [Move] {
         var moves = [Move]()
         let offsets = [
             (x+1, y+2),
