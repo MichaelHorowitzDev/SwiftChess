@@ -333,7 +333,17 @@ public struct Board {
         }
         return false
     }
-    
+    // generates all legal moves
+    mutating func legalMoves() -> [Move] {
+        for rank in 0...board.count-1 {
+            for item in 0...board[rank].count-1 {
+                if board[rank][item] is King && board[rank][item]?.color == turn {
+                    return generateLegalMoves(kingPosition: (item, rank), moves: generateAllMoves())
+                }
+            }
+        }
+        return []
+    }
     mutating func moveForPiece(at point: (x: Int, y: Int)) -> [Move] {
         var moves = [Move]()
         if point.y < board.count {
