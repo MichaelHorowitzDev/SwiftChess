@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Queen: Piece {
-    var color: PieceColor
+public struct Queen: Piece {
+    public var color: PieceColor
     
-    func attackingSquares(x: Int, y: Int, board: [[Piece?]]) -> [(Int, Int)] {
+    public func attackingSquares(x: Int, y: Int, board: [[Piece?]]) -> [(Int, Int)] {
         var attacking = [(Int, Int)]()
         var xLocation = x
         var yLocation = y
@@ -103,7 +103,7 @@ struct Queen: Piece {
         return attacking
     }
     
-    func moves(x: Int, y: Int, board: [[Piece?]]) -> [Move] {
+    public func moves(x: Int, y: Int, board: [[Piece?]]) -> [Move] {
         var moves = [Move]()
         var xLocation = x
         var yLocation = y
