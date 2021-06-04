@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftChess",
+        "repositoryURL": "https://github.com/MichaelHorowitzDev/SwiftChess",
+        "state": {
+          "branch": "main",
+          "revision": "bf858bcb93e9586f1a6573b1e7b0b8d707cd360b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
