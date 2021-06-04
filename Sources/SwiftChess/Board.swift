@@ -9,11 +9,11 @@ import Foundation
 
 
 public struct Board {
-    var board: [[Piece?]]
-    var turn: PieceColor = .white
+    public var board: [[Piece?]]
+    public var turn: PieceColor = .white
     var moves = [(move: Move, pieceMoved: Piece, pieceCaptured: Piece?)]()
-    var fenMoves = [String]()
-    var canCastle = (whiteKing: true, whiteQueen: true, blackKing: true, blackQueen: true)
+    public var fenMoves = [String]()
+    public var canCastle = (whiteKing: true, whiteQueen: true, blackKing: true, blackQueen: true)
     var halfmoveClock = 0
     var fullmoveNumber = 1
     var enPassantSquare: (x: Int, y: Int)?
