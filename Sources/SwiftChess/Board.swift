@@ -52,7 +52,7 @@ public struct Board {
         }
     }
     // get board as unicode string
-    var unicode: String {
+    public var unicode: String {
         var string = ""
         for i in board.reversed() {
             for piece in i {
@@ -99,7 +99,7 @@ public struct Board {
         return string
     }
     // get board as ascii string
-    var ascii: String {
+    public var ascii: String {
         var string = ""
         for i in board.reversed() {
             for piece in i {
@@ -130,7 +130,7 @@ public struct Board {
         }
         return string
     }
-    func squaresAttacked() -> [(Int, Int)] {
+    public func squaresAttacked() -> [(Int, Int)] {
         var attackedSquares = [(Int, Int)]()
         for rank in 0...board.count-1 {
             for item in 0...board[rank].count-1 {
@@ -143,7 +143,7 @@ public struct Board {
     }
     // is the king in check; toggles turn and checks if the king can be captured;
 //    TODO improve check detection in the future; current implementation is very inefficient
-    mutating func isCheck() -> Bool {
+    public mutating func isCheck() -> Bool {
         // toggle turn to see if opponent can capture our king
         turn.toggle()
         for rank in 0...board.count-1 {
@@ -334,7 +334,7 @@ public struct Board {
         return false
     }
     // generates all legal moves
-    mutating func legalMoves() -> [Move] {
+    public mutating func legalMoves() -> [Move] {
         for rank in 0...board.count-1 {
             for item in 0...board[rank].count-1 {
                 if board[rank][item] is King && board[rank][item]?.color == turn {
@@ -344,7 +344,7 @@ public struct Board {
         }
         return []
     }
-    mutating func moveForPiece(at point: (x: Int, y: Int)) -> [Move] {
+    public mutating func moveForPiece(at point: (x: Int, y: Int)) -> [Move] {
         var moves = [Move]()
         if point.y < board.count {
             if point.x < board[point.y].count {
@@ -422,7 +422,7 @@ public struct Board {
         }
     }
     // returns fen of current board
-    var fen: String {
+    public var fen: String {
         return FEN(board: self).fen
     }
     // used for testing an undo move when checking for legality of moves
