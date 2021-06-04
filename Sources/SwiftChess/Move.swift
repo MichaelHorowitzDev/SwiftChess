@@ -11,8 +11,8 @@ public struct Move: Equatable {
     public static func == (lhs: Move, rhs: Move) -> Bool {
         return lhs.from == rhs.from && lhs.to == rhs.to
     }
-    let from: (x: Int, y: Int)
-    let to: (x: Int, y: Int)
+    public let from: (x: Int, y: Int)
+    public let to: (x: Int, y: Int)
     let pieceMoved: Piece? = nil
     let captures: Bool = false
     
