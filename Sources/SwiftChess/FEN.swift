@@ -8,9 +8,9 @@
 import Foundation
 
 public struct FEN {
-    var fen: String
-    var board: Board
-    var isValid: Bool = true
+    public var fen: String
+    public var board: Board
+    public var isValid: Bool = true
     
     public init(board: Board) {
         self.fen = boardToFen(board: board)
