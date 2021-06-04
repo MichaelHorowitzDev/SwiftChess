@@ -7,10 +7,10 @@
 
 import Foundation
 
-struct Pawn: Piece {
-    var color: PieceColor
+public struct Pawn: Piece {
+    public var color: PieceColor
     
-    func attackingSquares(x: Int, y: Int, board: [[Piece?]]) -> [(Int, Int)] {
+    public func attackingSquares(x: Int, y: Int, board: [[Piece?]]) -> [(Int, Int)] {
         var attacking = [(Int, Int)]()
         if color == .white {
             if y < board.count-1 {
@@ -34,7 +34,7 @@ struct Pawn: Piece {
         return attacking
     }
     
-    func moves(x: Int, y: Int, board: [[Piece?]]) -> [Move] {
+    public func moves(x: Int, y: Int, board: [[Piece?]]) -> [Move] {
         var moves = [Move]()
         if color == .white {
             //piece is on last rank
