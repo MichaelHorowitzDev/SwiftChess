@@ -8,9 +8,9 @@
 import Foundation
 
 public struct Bishop: Piece {
-    var color: PieceColor
+    public var color: PieceColor
     
-    func attackingSquares(x: Int, y: Int, board: [[Piece?]]) -> [(Int, Int)] {
+    public func attackingSquares(x: Int, y: Int, board: [[Piece?]]) -> [(Int, Int)] {
         var board = board
         for rank in 0...board.count-1 {
             for item in 0...board[rank].count-1 {
@@ -79,7 +79,7 @@ public struct Bishop: Piece {
         return attacking
     }
     
-    func moves(x: Int, y: Int, board: [[Piece?]]) -> [Move] {
+    public func moves(x: Int, y: Int, board: [[Piece?]]) -> [Move] {
         var moves = [Move]()
         var xLocation = x
         var yLocation = y
