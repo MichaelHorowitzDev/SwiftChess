@@ -13,8 +13,8 @@ public struct Move: Equatable {
     }
     let from: (x: Int, y: Int)
     let to: (x: Int, y: Int)
-    let pieceMoved: Piece?
-    let captures: Bool
+    let pieceMoved: Piece? = nil
+    let captures: Bool = false
     
 //     init(from: (x: Int, y: Int), to: (x: Int, y: Int), pieceMoved: Piece? = nil, captures: Bool = false) {
 //         self.from = (x: from.x-1, y: from.y-1)
