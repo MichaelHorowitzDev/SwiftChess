@@ -9,9 +9,9 @@ import Foundation
 
 public struct Game {
     var pgnMoves = [String]()
-    var board: Board
-    var gameState: GameState
-    var turn: PieceColor
+    public var board: Board
+    public var gameState: GameState
+    public var turn: PieceColor
     
     // make move on board but also check for gamestate
     @discardableResult
